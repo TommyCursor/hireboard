@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: #1d1d1f;
+    color: #fafaf6;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .label {
+    font-size: 0.625rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+  .title-xl {
+    font-size: clamp(3.5rem, 8vw, 8.5rem);
+    font-weight: 700;
+    line-height: 0.82;
+    letter-spacing: -0.04em;
+    text-transform: lowercase;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .title-lg {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    text-transform: lowercase;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .title-md {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    text-transform: lowercase;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  .btn-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 2rem;
+    height: 3.5rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    transition: all 0.4s cubic-bezier(.19,1,.22,1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .btn-pill-yellow {
+    background: #ffd074;
+    color: #1d1d1f;
+  }
+  .btn-pill-yellow:hover {
+    background: #ffba34;
+    transform: scale(1.02);
+  }
+  .btn-pill-outline {
+    background: transparent;
+    color: #a374ff;
+    border: 1px solid #a374ff;
+  }
+  .btn-pill-outline:hover {
+    background: #a374ff;
+    color: #fafaf6;
+    transform: scale(1.02);
+  }
+  .btn-pill-ghost {
+    background: transparent;
+    color: #fafaf6;
+    border: 1px solid rgba(250,250,246,0.15);
+  }
+  .btn-pill-ghost:hover {
+    background: rgba(250,250,246,0.08);
+    transform: scale(1.02);
+  }
+  .accent-turquoise { color: #17f1d1; }
+  .accent-purple { color: #a374ff; }
+  .accent-yellow { color: #ffd074; }
+  .bg-accent-turquoise { background: #17f1d1; }
+  .bg-accent-purple { background: #a374ff; }
+  .bg-accent-yellow { background: #ffd074; }
+}
